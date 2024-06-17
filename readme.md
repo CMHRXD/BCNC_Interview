@@ -39,8 +39,8 @@ POST /bills: Crea una nueva factura en el sistema.
 GET /integrate: Inicia el proceso de integración de facturas.
 
     Parámetros de consulta:
-        start_date: Fecha de inicio para el rango de consulta (Formato: YYYY-MM-DD).
-        end_date: Fecha de fin para el rango de consulta (Formato: YYYY-MM-DD).
+        fecha_inicio: Fecha de inicio para el rango de consulta (Formato: YYYY-MM-DD).
+        fecha_fin: Fecha de fin para el rango de consulta (Formato: YYYY-MM-DD).
 
 ---
 
