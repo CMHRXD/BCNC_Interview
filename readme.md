@@ -53,3 +53,41 @@ Operaciones RESTful: Se sigue el principio de diseño RESTful para definir las o
 Parámetros de Consulta: Para la integración se utilizan parámetros de consulta (query parameters) en lugar de path parameters, ya que los filtros son opcionales y no están directamente relacionados con la identificación de recursos.
 
 API Intermediaria: La api-manager actúa como intermediaria para manejar la autenticación, transformación de datos y reenvío entre api-sistemas-A y api-sistemas-B, mejorando la seguridad y mantenibilidad del sistema.
+
+
+
+### Guia de uso
+Clonar el Repositorio:
+    bash git clone https://github.com/CMHRXD/BCNC_Interview.git
+    cd BCNC_Interview
+
+##### Configurar el Entorno:
+
+    Crear archivos .env.dev o .env.prod y configurar las variables de entorno necesarias.
+
+##### Instalar Dependencias:
+
+    npm install
+
+##### Ejecutar los Servidores:
+
+    Navegar a los directorios de api-sistemas-A, api-sistemas-B, y api-manager y ejecutar:
+
+    bash npm run dev-server
+
+
+Probar la Integración:
+        Intrucciones
+            1-Importar las colecciones de Postman para probar las APIs:
+                BCNC_Tecnical_enterview.postman_collection.json: Contiene las solicitudes API.
+                BCNC_Tecnical_enterview_env.postman_collection.json: Contiene las variables de entorno para las solicitudes.
+            2-Hacer Get request al endpoint Integrate Apis para realizar el proceso de integracion.
+            
+            
+Notas
+
+    Variables de Entorno: Asegúrese de configurar correctamente las variables de entorno (PORT, configuraciones de base de datos, claves de API) en los archivos .env.
+    
+    Logs y Monitoreo: Implementar herramientas de logging como Winston o Morgan para registrar y monitorear la actividad del servidor.
+    
+    Seguridad: Manejar tokens y claves de API de manera segura, sin exponerlas en clientes.
