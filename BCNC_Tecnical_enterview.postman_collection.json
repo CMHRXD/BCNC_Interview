@@ -1,0 +1,559 @@
+{
+	"info": {
+		"_postman_id": "af580791-ff37-422c-9ea8-95722e721a0c",
+		"name": "Tecnical enterview",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34760592"
+	},
+	"item": [
+		{
+			"name": "System-A",
+			"item": [
+				{
+					"name": "Client",
+					"item": [
+						{
+							"name": "Create Client",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \"clientId\": \"new_client_id\",\r\n        \"clientSecret\": \"new_client_secret\",\r\n        \"grants\": [\"client_credentials\"],\r\n        \"userId\": 1\r\n      }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{DevURL}}{{ClientsBaseURI}}",
+									"host": [
+										"{{DevURL}}{{ClientsBaseURI}}"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "201",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n        \"clientId\": \"new_client_id\",\r\n        \"clientSecret\": \"new_client_secret\",\r\n        \"grants\": [\"client_credentials\"],\r\n        \"userId\": 1\r\n      }",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:3000/api/v1/clients",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"v1",
+												"clients"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "191"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"bf-yVmeEaR0RfD/eDrSym2qpjtw+24\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 16 Jun 2024 18:15:23 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"grants\": [\n        \"client_credentials\"\n    ],\n    \"id\": 1,\n    \"clientId\": \"new_client_id\",\n    \"clientSecret\": \"new_client_secret\",\n    \"userId\": 1,\n    \"updatedAt\": \"2024-06-16T18:15:23.319Z\",\n    \"createdAt\": \"2024-06-16T18:15:23.319Z\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Get Clients",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{DevURL}}{{ClientsBaseURI}}",
+									"host": [
+										"{{DevURL}}{{ClientsBaseURI}}"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Users",
+					"item": [
+						{
+							"name": "Create User",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"cristian\",\r\n    \"password\": \"1234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{DevURL}}{{UsersBaseURI}}/",
+									"host": [
+										"{{DevURL}}{{UsersBaseURI}}"
+									],
+									"path": [
+										""
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "201",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"username\": \"cristian\",\r\n    \"password\": \"1234\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:3000/api/v1/users/",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"v1",
+												"users",
+												""
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "126"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"7e-/ADqwE0WegaHi1CIhUa4M6nqEbM\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 16 Jun 2024 17:58:36 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 1,\n    \"username\": \"cristian\",\n    \"password\": \"1234\",\n    \"updatedAt\": \"2024-06-16T17:58:36.535Z\",\n    \"createdAt\": \"2024-06-16T17:58:36.535Z\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Get Users",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{DevURL}}{{UsersBaseURI}}",
+									"host": [
+										"{{DevURL}}{{UsersBaseURI}}"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Facturas",
+					"item": [
+						{
+							"name": "Get Facturas",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{DevURL}}facturas?fecha_inicio=2024-06-15&fecha_fin=2024-06-20",
+									"host": [
+										"{{DevURL}}facturas"
+									],
+									"query": [
+										{
+											"key": "fecha_inicio",
+											"value": "2024-06-15"
+										},
+										{
+											"key": "fecha_fin",
+											"value": "2024-06-20"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Facturas",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"cliente\": \"Empresa XYZ\",\r\n    \"monto\": 1500.75,\r\n    \"fecha_emision\": \"2024-06-18\",\r\n    \"estado\": \"no pagada\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{DevURL}}{{FacturasBaseURI}}",
+									"host": [
+										"{{DevURL}}{{FacturasBaseURI}}"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "auth",
+					"item": [
+						{
+							"name": "Get Token",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "client_id",
+											"value": "new_client_id",
+											"type": "text"
+										},
+										{
+											"key": "client_secret",
+											"value": "new_client_secret",
+											"type": "text"
+										},
+										{
+											"key": "grant_type",
+											"value": "client_credentials",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{DevURL}}{{AuthBaseURI}}/token",
+									"host": [
+										"{{DevURL}}{{AuthBaseURI}}"
+									],
+									"path": [
+										"token"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "System-B",
+			"item": [
+				{
+					"name": "Invoices",
+					"item": [
+						{
+							"name": "Get Invoices",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-api-key",
+										"value": "123",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{SistemaB}}{{InvoiceBaseURI}}?fecha_inicio=2024-06-15&fecha_fin=2024-06-18",
+									"host": [
+										"{{SistemaB}}{{InvoiceBaseURI}}"
+									],
+									"query": [
+										{
+											"key": "fecha_inicio",
+											"value": "2024-06-15"
+										},
+										{
+											"key": "fecha_fin",
+											"value": "2024-06-18"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Get Invoices",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "x-api-key",
+												"value": "123",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{SistemaB}}{{InvoiceBaseURI}}?fecha_inicio=2024-06-15&fecha_fin=2024-06-18",
+											"host": [
+												"{{SistemaB}}{{InvoiceBaseURI}}"
+											],
+											"query": [
+												{
+													"key": "fecha_inicio",
+													"value": "2024-06-15"
+												},
+												{
+													"key": "fecha_fin",
+													"value": "2024-06-18"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "739"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"2e3-qVCyA31haNy26YAsMCfYtPrzhKA\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 16 Jun 2024 23:57:37 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"invoice_id\": 1,\n        \"customer\": \"Empresa XYZ\",\n        \"amount_due\": 1500.75,\n        \"date_issued\": \"2024-06-16\",\n        \"status\": \"paid\",\n        \"createdAt\": \"2024-06-16T23:57:30.511Z\",\n        \"updatedAt\": \"2024-06-16T23:57:30.511Z\"\n    },\n    {\n        \"invoice_id\": 2,\n        \"customer\": \"Empresa XYZ\",\n        \"amount_due\": 1500.75,\n        \"date_issued\": \"2024-06-18\",\n        \"status\": \"unpaid\",\n        \"createdAt\": \"2024-06-16T23:57:30.514Z\",\n        \"updatedAt\": \"2024-06-16T23:57:30.514Z\"\n    },\n    {\n        \"invoice_id\": 3,\n        \"customer\": \"Empresa XYZ\",\n        \"amount_due\": 1500.75,\n        \"date_issued\": \"2024-06-17\",\n        \"status\": \"paid\",\n        \"createdAt\": \"2024-06-16T23:57:30.515Z\",\n        \"updatedAt\": \"2024-06-16T23:57:30.515Z\"\n    },\n    {\n        \"invoice_id\": 4,\n        \"customer\": \"Empresa XYZ\",\n        \"amount_due\": 1500.75,\n        \"date_issued\": \"2024-06-18\",\n        \"status\": \"paid\",\n        \"createdAt\": \"2024-06-16T23:57:30.516Z\",\n        \"updatedAt\": \"2024-06-16T23:57:30.516Z\"\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "Create Invoices",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"customer\": \"Empresa XYZ\",\r\n    \"amount_due\": 1500.75,\r\n    \"date_issued\": \"2024-06-16\",\r\n    \"status\": \"Unpaid\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{DevURL}}{{FacturasBaseURI}}",
+									"host": [
+										"{{DevURL}}{{FacturasBaseURI}}"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "System-Manager",
+			"item": [
+				{
+					"name": "Integrate APIs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{IntegrationServiceURI}}integrate",
+							"host": [
+								"{{IntegrationServiceURI}}integrate"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Integrate APIs",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{IntegrationServiceURI}}integrate",
+									"host": [
+										"{{IntegrationServiceURI}}integrate"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "45"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2d-8d/rh1Gnfe1GLWk3OABbmKqwiYA\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 16 Jun 2024 23:57:35 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Facturas importadas con éxito.\"\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}

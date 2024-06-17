@@ -1,0 +1,57 @@
+{
+	"id": "05bec2d5-eac4-47c1-9171-e39a26d2bec4",
+	"name": "Sistemas",
+	"values": [
+		{
+			"key": "DevURL",
+			"value": "http://localhost:3000/",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "AuthBaseURI",
+			"value": "oauth",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "UsersBaseURI",
+			"value": "users",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "ClientsBaseURI",
+			"value": "clients",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "FacturasBaseURI",
+			"value": "facturas",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "SistemaB",
+			"value": "http://localhost:3005/",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "InvoiceBaseURI",
+			"value": "bills",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "IntegrationServiceURI",
+			"value": "http://localhost:3010/",
+			"type": "default",
+			"enabled": true
+		}
+	],
+	"_postman_variable_scope": "environment",
+	"_postman_exported_at": "2024-06-17T00:24:47.933Z",
+	"_postman_exported_using": "Postman/11.2.1"
+}
