@@ -72,9 +72,7 @@ Clonar el Repositorio:
 ##### Ejecutar los Servidores:
 
     Navegar a los directorios de api-sistemas-A, api-sistemas-B, y api-manager y ejecutar:
-
-    bash npm run dev-server
-
+    npm run dev-server
 
 Probar la Integración:
         Intrucciones
