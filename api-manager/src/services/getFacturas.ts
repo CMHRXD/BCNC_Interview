@@ -5,7 +5,7 @@ dotenv.config({
   path: `.env.${process.env.NODE_ENV}`,
 });
 
-const getFacturas = async () => {
+const getFacturas = async (fecha_inicio: string, fecha_fin: string) => {
   const sistema_A = process.env.API_SISTEMA_A_URL;
   if (!process.env.CLIENT_ID || !process.env.CLIENT_SECRET) {
     throw new Error(
@@ -37,7 +37,9 @@ const getFacturas = async () => {
 
     //Get invoices from sistema A
     const facturas: facturas[] = await fetch(
-      `${sistema_A}/facturas?fecha_inicio=2024-06-15&fecha_fin=2024-06-20`,
+      `${sistema_A}/facturas?fecha_inicio=${fecha_inicio || ""}&fecha_fin=${
+        fecha_fin || ""
+      }`,
       {
         method: "GET",
         headers: {
