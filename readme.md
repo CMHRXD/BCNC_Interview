@@ -74,7 +74,7 @@ Clonar el Repositorio:
     Navegar a los directorios de api-sistemas-A, api-sistemas-B, y api-manager y ejecutar:
     npm run dev-server
 
-Probar la Integración:
+##### Probar la Integración:
         Intrucciones
             1-Importar las colecciones de Postman para probar las APIs:
                 BCNC_Tecnical_enterview.postman_collection.json: Contiene las solicitudes API.
