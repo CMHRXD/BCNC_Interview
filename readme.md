@@ -1,10 +1,10 @@
-####Descripción General
+#### Descripción General
 
 El proyecto consiste en la integración de tres componentes principales: api-sistemas-A, api-sistemas-B, y api-manager. El proceso de integración implica la obtención de facturas desde api-sistemas-A y su envío a api-sistemas-B utilizando api-manager.
 
 ---
 
-####API-sistemas-A
+#### API-sistemas-A
 
 GET /facturas: Obtiene todas las facturas en un rango de fechas.
 
@@ -21,7 +21,7 @@ POST /auth/token: Obtiene un token de autenticación OAuth 2.0.
 
 ---
 
-####API-sistemas-B
+#### API-sistemas-B
 
 POST /bills: Crea una nueva factura en el sistema.
 
@@ -34,7 +34,7 @@ POST /bills: Crea una nueva factura en el sistema.
 
 ---
 
-####API-manager
+#### API-manager
 
 GET /integrate: Inicia el proceso de integración de facturas.
 
@@ -44,7 +44,7 @@ GET /integrate: Inicia el proceso de integración de facturas.
 
 ---
 
-####Justificación del Diseño
+#### Justificación del Diseño
 
 Múltiples Métodos de Consulta: Se utilizan diferentes métodos de consulta (GET, POST) para permitir la realización de diversas operaciones sobre los recursos de facturas.
 
